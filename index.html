@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly AI & Robotics — Intelligence Engineered. Automation Deployed.</title>
+  <meta name="description" content="Deploy AI-powered robotic systems that learn, adapt, and optimize manufacturing workflows.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="assets/images/logo-stackly.webp" alt="Stackly AI" class="header-logo-img">
+        </div>
+      </a>
+
+      <nav class="header-nav" id="headerNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="signin.html" class="btn btn-ghost btn-login">Log In</a>
+        <a href="signup.html" class="btn btn-cyan btn-signup">Sign Up</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offcanvas Overlay -->
+  <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+
+  <!-- Offcanvas Menu -->
+  <div class="offcanvas" id="offcanvas">
+    <div class="offcanvas-header">
+      <a href="index.html" class="header-logo">
+        <div class="header-logo-icon">
+          <img src="assets/images/logo-stackly.webp" alt="Stackly AI" class="header-logo-img">
+        </div>
+      </a>
+      <button class="offcanvas-close" id="offcanvasClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="offcanvas-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="offcanvas-actions">
+      <a href="signin.html" class="btn btn-ghost">Log In</a>
+      <a href="signup.html" class="btn btn-cyan">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow-orb"></div>
+      <div class="hero-glow-orb hero-glow-orb-2"></div>
+    </div>
+    <div class="hero-particles">
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+      <div class="hero-particle"></div>
+    </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-left">
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            Next-Gen Automation Platform
+          </div>
+          <h1 class="hero-title">Intelligence <span class="gradient-text">Engineered</span>.<br>Automation <span class="gradient-text">Deployed</span>.</h1>
+          <p class="hero-desc">Deploy AI-powered robotic systems that learn, adapt, and optimize manufacturing workflows across your entire operation — from factory floor to boardroom.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-cyan magnetic">Request Demo</a>
+            <a href="#process" class="btn btn-violet magnetic">Explore Technology</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="hero-metric">
+              <span class="hero-metric-value">99.7%</span>
+              <span class="hero-metric-label">System Uptime</span>
+            </div>
+            <div class="hero-metric-divider"></div>
+            <div class="hero-metric">
+              <span class="hero-metric-value">500+</span>
+              <span class="hero-metric-label">Enterprise Clients</span>
+            </div>
+            <div class="hero-metric-divider"></div>
+            <div class="hero-metric">
+              <span class="hero-metric-value">40%</span>
+              <span class="hero-metric-label">Cost Reduction</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-right">
+          <div class="hero-cube-wrapper">
+            <div class="hero-cube-ring"></div>
+            <div class="hero-cube-ring hero-cube-ring-2"></div>
+            <div class="hero-cube">
+              <div class="hero-cube-face hero-cube-front"></div>
+              <div class="hero-cube-face hero-cube-back"></div>
+              <div class="hero-cube-face hero-cube-right"></div>
+              <div class="hero-cube-face hero-cube-left"></div>
+              <div class="hero-cube-face hero-cube-top"></div>
+              <div class="hero-cube-face hero-cube-bottom"></div>
+            </div>
+            <div class="hero-cube-core"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUSTED PARTNERS ============ -->
+  <section class="partners" id="partners">
+    <div class="container">
+      <p class="partners-label">Trusted by Industry Leaders Worldwide</p>
+      <div class="partners-wrapper">
+        <div class="partners-track">
+          <span class="partner-pill">AeroCore</span>
+          <span class="partner-pill">Synthwave Industries</span>
+          <span class="partner-pill">Quantum Dynamics</span>
+          <span class="partner-pill">Terraform Robotics</span>
+          <span class="partner-pill">NovaTech</span>
+          <span class="partner-pill">Pulse Automation</span>
+          <span class="partner-pill">Zenith AI</span>
+          <span class="partner-pill">CoreVault</span>
+          <span class="partner-pill">AeroCore</span>
+          <span class="partner-pill">Synthwave Industries</span>
+          <span class="partner-pill">Quantum Dynamics</span>
+          <span class="partner-pill">Terraform Robotics</span>
+          <span class="partner-pill">NovaTech</span>
+          <span class="partner-pill">Pulse Automation</span>
+          <span class="partner-pill">Zenith AI</span>
+          <span class="partner-pill">CoreVault</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE DO ============ -->
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Three Pillars of <span class="gradient-text">Intelligent Automation</span>.</h2>
+        <p class="section-desc section-desc-center">Stackly AI delivers end-to-end solutions that transform industrial operations through artificial intelligence and advanced robotics.</p>
+      </div>
+      <div class="solutions-grid stagger-children">
+        <div class="solution-card tilt-card">
+          <div class="solution-card-glow"></div>
+          <div class="solution-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <h3 class="solution-title">AI-Powered Analytics</h3>
+          <p class="solution-desc">Deep learning models that predict equipment failures, optimize production schedules, and reduce downtime by up to 73% across your entire operation.</p>
+          <a href="solutions.html" class="solution-link">Explore Analytics <span class="solution-link-arrow">&rarr;</span></a>
+        </div>
+        <div class="solution-card solution-card-featured tilt-card">
+          <div class="solution-card-glow"></div>
+          <div class="solution-badge">Core Platform</div>
+          <div class="solution-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="solution-title">Autonomous Robotics</h3>
+          <p class="solution-desc">Self-guided robotic fleets with real-time navigation, obstacle avoidance, and adaptive path planning for warehouses, factories, and logistics hubs.</p>
+          <a href="solutions.html" class="solution-link">Explore Robotics <span class="solution-link-arrow">&rarr;</span></a>
+        </div>
+        <div class="solution-card tilt-card">
+          <div class="solution-card-glow"></div>
+          <div class="solution-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3 class="solution-title">Digital Twin Platform</h3>
+          <p class="solution-desc">High-fidelity virtual replicas of physical systems for simulation, testing, and scenario planning — all without interrupting live production.</p>
+          <a href="solutions.html" class="solution-link">Explore Digital Twin <span class="solution-link-arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR PLATFORM ============ -->
+  <section class="section platform" id="platform">
+    <div class="container">
+      <div class="platform-intro fade-up">
+        <span class="section-label">Our Platform</span>
+        <h2 class="section-title">End-to-End <span class="gradient-text">Industrial AI Stack</span>.</h2>
+      </div>
+      <div class="platform-rows">
+        <div class="platform-row">
+          <div class="platform-visual fade-left">
+            <img src="assets/images/platform-data.webp" alt="Sensor & Data Ingestion" class="platform-img" loading="lazy">
+          </div>
+          <div class="platform-content fade-right">
+            <h3 class="platform-content-title">Sensor Fusion &amp; Data Ingestion</h3>
+            <p class="platform-content-desc">Aggregate and normalize data from thousands of IoT sensors, cameras, and robotic controllers in real time. Our edge gateways process 10TB+ daily with sub-10ms latency.</p>
+            <ul class="platform-features">
+              <li class="platform-feature">
+                <span class="platform-feature-check"></span>
+                Multi-protocol support (MQTT, OPC-UA, Modbus)
+              </li>
+              <li class="platform-feature">
+                <span class="platform-feature-check"></span>
+                Real-time anomaly detection at the edge
+              </li>
+              <li class="platform-feature">
+                <span class="platform-feature-check"></span>
+                Automatic data labeling and versioning
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="platform-row platform-row-reverse">
+          <div class="platform-content fade-left">
+            <h3 class="platform-content-title">AI Model Orchestration</h3>
+            <p class="platform-content-desc">Deploy, monitor, and retrain machine learning models across distributed environments. Our orchestration layer ensures models run with maximum efficiency and minimal latency.</p>
+            <ul class="platform-features">
+              <li class="platform-feature">
+                <span class="platform-feature-check"></span>
+                Automated model retraining pipelines
+              </li>
+              <li class="platform-feature">
+                <span class="platform-feature-check"></span>
+                A/B testing and canary deployments
+              </li>
+              <li class="platform-feature">
+                <span class="platform-feature-check"></span>
+                Distributed inference across edge fleet
+              </li>
+            </ul>
+          </div>
+          <div class="platform-visual fade-right">
+            <img src="assets/images/platform-ai.webp" alt="AI Model Orchestration" class="platform-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">From Assessment to <span class="gradient-text">Autonomous Operation</span>.</h2>
+        <p class="section-desc section-desc-center">Our proven four-phase methodology ensures successful deployment with minimal disruption to your existing operations.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line">
+          <div class="timeline-line-progress"></div>
+        </div>
+        <div class="timeline-steps stagger-children">
+          <div class="timeline-step">
+            <div class="timeline-step-marker">
+              <span class="timeline-step-num">01</span>
+            </div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Assess</h3>
+              <p class="timeline-step-desc">Deep analysis of workflows, pain points, and automation potential across your facilities.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-marker">
+              <span class="timeline-step-num">02</span>
+            </div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Design</h3>
+              <p class="timeline-step-desc">Custom architecture integrating AI models, robotics hardware, and legacy systems.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-marker">
+              <span class="timeline-step-num">03</span>
+            </div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Deploy</h3>
+              <p class="timeline-step-desc">Phased rollout with zero-downtime transitions and comprehensive team training.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-step-marker">
+              <span class="timeline-step-num">04</span>
+            </div>
+            <div class="timeline-step-content">
+              <h3 class="timeline-step-title">Optimize</h3>
+              <p class="timeline-step-desc">Continuous model refinement and system tuning for peak performance over time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRIES WE SERVE ============ -->
+  <section class="section industries" id="industries">
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">Industries We Serve</span>
+        <h2 class="section-title">Transforming Every <span class="gradient-text">Industry Verticals</span>.</h2>
+        <p class="section-desc section-desc-center">Stackly AI delivers tailored automation solutions across the most demanding industrial sectors worldwide.</p>
+      </div>
+      <div class="industries-grid stagger-children">
+        <div class="industry-card tilt-card">
+          <div class="industry-card-glow"></div>
+          <img src="assets/images/industry-automotive.webp" alt="Automotive" class="industry-img" loading="lazy">
+          <div class="industry-overlay">
+            <h3 class="industry-name">Automotive</h3>
+            <p class="industry-desc">Predictive maintenance, assembly line robotics, and quality control vision systems.</p>
+          </div>
+        </div>
+        <div class="industry-card tilt-card">
+          <div class="industry-card-glow"></div>
+          <img src="assets/images/industry-healthcare.webp" alt="Healthcare" class="industry-img" loading="lazy">
+          <div class="industry-overlay">
+            <h3 class="industry-name">Healthcare</h3>
+            <p class="industry-desc">Surgical robotics, lab automation, and AI diagnostic imaging pipelines.</p>
+          </div>
+        </div>
+        <div class="industry-card tilt-card">
+          <div class="industry-card-glow"></div>
+          <img src="assets/images/industry-logistics.webp" alt="Logistics" class="industry-img" loading="lazy">
+          <div class="industry-overlay">
+            <h3 class="industry-name">Logistics</h3>
+            <p class="industry-desc">Autonomous warehouse fleets, sortation systems, and route optimization.</p>
+          </div>
+        </div>
+        <div class="industry-card tilt-card">
+          <div class="industry-card-glow"></div>
+          <img src="assets/images/industry-energy.webp" alt="Energy" class="industry-img" loading="lazy">
+          <div class="industry-overlay">
+            <h3 class="industry-name">Energy</h3>
+            <p class="industry-desc">Turbine monitoring, grid optimization, and hazardous environment inspection.</p>
+          </div>
+        </div>
+        <div class="industry-card tilt-card">
+          <div class="industry-card-glow"></div>
+          <img src="assets/images/industry-electronics.webp" alt="Electronics" class="industry-img" loading="lazy">
+          <div class="industry-overlay">
+            <h3 class="industry-name">Electronics</h3>
+            <p class="industry-desc">Micro-soldering precision, PCB inspection, and cleanroom automation.</p>
+          </div>
+        </div>
+        <div class="industry-card tilt-card">
+          <div class="industry-card-glow"></div>
+          <img src="assets/images/industry-aerospace.webp" alt="Aerospace" class="industry-img" loading="lazy">
+          <div class="industry-overlay">
+            <h3 class="industry-name">Aerospace</h3>
+            <p class="industry-desc">Composite layup robotics, NDT inspection, and supply chain automation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT BY NUMBERS ============ -->
+  <section class="section impact" id="impact">
+    <div class="impact-bg-grid"></div>
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">Impact by Numbers</span>
+        <h2 class="section-title">Quantifiable <span class="gradient-text">Industrial Results</span>.</h2>
+      </div>
+      <div class="impact-grid stagger-children">
+        <div class="impact-item">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <div class="impact-number" data-count="2000">0</div>
+          <div class="impact-label">Robots Deployed</div>
+          <div class="impact-bar">
+            <div class="impact-bar-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="impact-number" data-count="98.6">0</div>
+          <div class="impact-label">Precision Rate %</div>
+          <div class="impact-bar">
+            <div class="impact-bar-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="impact-number" data-count="15">0</div>
+          <div class="impact-label">M+ Runtime Hours</div>
+          <div class="impact-bar">
+            <div class="impact-bar-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="impact-number" data-count="500">0</div>
+          <div class="impact-label">Enterprise Clients</div>
+          <div class="impact-bar">
+            <div class="impact-bar-fill" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">Featured Projects</span>
+        <h2 class="section-title">Real Results from <span class="gradient-text">Intelligent Automation</span>.</h2>
+        <p class="section-desc section-desc-center">See how industry leaders are transforming their operations with Stackly AI's autonomous systems.</p>
+      </div>
+      <div class="projects-grid stagger-children">
+        <div class="project-card tilt-card">
+          <div class="project-image">
+            <img src="assets/images/project-manufacturing.webp" alt="Manufacturing automation" class="project-img" loading="lazy">
+            <div class="project-image-overlay"></div>
+            <div class="project-image-content">
+              <span class="project-tag tag-cyan">Manufacturing</span>
+              <h3 class="project-card-title">42% Throughput Increase</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">Multi-national automotive manufacturer deployed predictive maintenance across 200+ assembly line robots, reducing unplanned downtime by 67%.</p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <span class="project-stat-value">42%</span>
+                <span class="project-stat-label">Throughput</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-value">67%</span>
+                <span class="project-stat-label">Less Downtime</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-value">3x</span>
+                <span class="project-stat-label">ROI in Year 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card tilt-card">
+          <div class="project-image">
+            <img src="assets/images/project-logistics.webp" alt="Autonomous warehouse fleet" class="project-img" loading="lazy">
+            <div class="project-image-overlay"></div>
+            <div class="project-image-content">
+              <span class="project-tag tag-violet">Logistics</span>
+              <h3 class="project-card-title">Autonomous Warehouse Fleet</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">Leading e-commerce fulfillment center deployed 150 AMRs with Stackly navigation AI, cutting labor costs by 52% and errors by 94%.</p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <span class="project-stat-value">150</span>
+                <span class="project-stat-label">Robots Deployed</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-value">52%</span>
+                <span class="project-stat-label">Cost Reduction</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-value">94%</span>
+                <span class="project-stat-label">Error Reduction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card tilt-card">
+          <div class="project-image">
+            <img src="assets/images/project-energy.webp" alt="Energy grid optimization" class="project-img" loading="lazy">
+            <div class="project-image-overlay"></div>
+            <div class="project-image-content">
+              <span class="project-tag tag-cyan">Energy</span>
+              <h3 class="project-card-title">Grid-Level AI Optimization</h3>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">Renewable energy operator reduced turbine downtime by 73% using Stackly edge AI for real-time monitoring and predictive diagnostics.</p>
+            <div class="project-stats">
+              <div class="project-stat">
+                <span class="project-stat-value">73%</span>
+                <span class="project-stat-label">Less Downtime</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-value">12</span>
+                <span class="project-stat-label">Wind Farms</span>
+              </div>
+              <div class="project-stat">
+                <span class="project-stat-value">99.9%</span>
+                <span class="project-stat-label">Model Accuracy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="section tech-stack" id="stack">
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">Technology Stack</span>
+        <h2 class="section-title">Built on <span class="gradient-text">Industry-Leading</span> Infrastructure.</h2>
+        <p class="section-desc section-desc-center">Our platform integrates with the world's most advanced hardware and software ecosystems.</p>
+      </div>
+      <div class="stack-grid stagger-children">
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-nvidia.webp" alt="NVIDIA" class="stack-logo" loading="lazy">
+            <span class="stack-label">NVIDIA Jetson & CUDA</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-aws.webp" alt="AWS" class="stack-logo" loading="lazy">
+            <span class="stack-label">AWS IoT & Greengrass</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-ros.webp" alt="ROS" class="stack-logo" loading="lazy">
+            <span class="stack-label">ROS 2 Robotics</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-tensorflow.webp" alt="TensorFlow" class="stack-logo" loading="lazy">
+            <span class="stack-label">TensorFlow & PyTorch</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-docker.webp" alt="Docker" class="stack-logo" loading="lazy">
+            <span class="stack-label">Docker & Kubernetes</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-siemens.webp" alt="Siemens" class="stack-logo" loading="lazy">
+            <span class="stack-label">Siemens & Rockwell</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-opencv.webp" alt="OpenCV" class="stack-logo" loading="lazy">
+            <span class="stack-label">OpenCV & OAK-D</span>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-item-inner">
+            <img src="assets/images/stack-mqtt.webp" alt="MQTT" class="stack-logo" loading="lazy">
+            <span class="stack-label">MQTT & OPC-UA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLIENT VOICES ============ -->
+  <section class="section voices" id="testimonials">
+    <div class="container">
+      <div class="fade-up section-header-center">
+        <span class="section-label">Client Voices</span>
+        <h2 class="section-title">Trusted by <span class="gradient-text">Industry Leaders</span>.</h2>
+      </div>
+      <div class="carousel" id="testimonialCarousel">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <div class="carousel-card">
+              <div class="carousel-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
+              </div>
+              <p class="carousel-quote">"Stackly AI transformed our production line. The predictive maintenance alone paid for the entire deployment in under six months. Their team's expertise in industrial AI is unmatched."</p>
+              <div class="carousel-author">
+                <div class="carousel-avatar" style="background: linear-gradient(135deg, var(--clr-cyan-400), var(--clr-violet-400));">EV</div>
+                <div>
+                  <div class="carousel-name">Dr. Elena Voss</div>
+                  <div class="carousel-role">CTO, AeroCore Industries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-card">
+              <div class="carousel-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
+              </div>
+              <p class="carousel-quote">"The autonomous navigation system reduced our warehouse operating costs by 52% while increasing throughput by 35%. Stackly's deployment was seamless and the training exceeded our expectations."</p>
+              <div class="carousel-author">
+                <div class="carousel-avatar" style="background: linear-gradient(135deg, var(--clr-violet-400), var(--clr-cyan-400));">MK</div>
+                <div>
+                  <div class="carousel-name">Marcus Kwon</div>
+                  <div class="carousel-role">VP Operations, Synthwave Logistics</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-card">
+              <div class="carousel-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
+              </div>
+              <p class="carousel-quote">"Their edge AI platform runs flawlessly in our harshest environments. 99.9% uptime across 500+ remote installations — a level of reliability we didn't think was possible at scale."</p>
+              <div class="carousel-author">
+                <div class="carousel-avatar" style="background: linear-gradient(135deg, var(--clr-cyan-400), var(--clr-violet-400));">SL</div>
+                <div>
+                  <div class="carousel-name">Sarah Lindholm</div>
+                  <div class="carousel-role">Director of Automation, Quantum Dynamics</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-card">
+              <div class="carousel-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"/></svg>
+              </div>
+              <p class="carousel-quote">"We evaluated seven vendors before choosing Stackly. Their digital twin platform gave us the confidence to simulate our entire production line before committing to hardware changes."</p>
+              <div class="carousel-author">
+                <div class="carousel-avatar" style="background: linear-gradient(135deg, var(--clr-violet-400), var(--clr-cyan-400));">JR</div>
+                <div>
+                  <div class="carousel-name">James Renner</div>
+                  <div class="carousel-role">Plant Director, Terraform Robotics</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section cta" id="cta">
+    <div class="cta-bg">
+      <div class="cta-gradient"></div>
+      <div class="cta-grid"></div>
+      <div class="cta-orb"></div>
+      <div class="cta-orb cta-orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content fade-up">
+        <span class="section-label" style="justify-content: center;">Get Started Today</span>
+        <h2 class="cta-title">Ready to Automate Your <span class="gradient-text">Industrial Future</span>?</h2>
+        <p class="cta-desc">Join 500+ enterprises already running Stackly AI. Deploy in weeks, not months. Our team of engineers will guide you every step of the way.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-cyan magnetic">Deploy Now</a>
+          <a href="contact.html" class="btn btn-violet magnetic">Talk to an Engineer</a>
+        </div>
+        <div class="cta-trust">
+          <span class="cta-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            No lock-in contracts
+          </span>
+          <span class="cta-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Free proof of concept
+          </span>
+          <span class="cta-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            24/7 enterprise support
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="header-logo" style="margin-bottom: 0.5rem;">
+            <div class="header-logo-icon">
+              <img src="assets/images/logo-stackly.webp" alt="Stackly AI" class="header-logo-img">
+            </div>
+          </a>
+          <p class="footer-brand-desc">Intelligence Engineered. Automation Deployed. AI-powered robotic systems for the next industrial revolution.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter/X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Solutions</h4>
+          <nav class="footer-links">
+            <a href="solutions.html">Predictive Maintenance</a>
+            <a href="solutions.html">Computer Vision</a>
+            <a href="solutions.html">Autonomous Navigation</a>
+            <a href="solutions.html">Edge AI</a>
+            <a href="solutions.html">Digital Twin</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <nav class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="about.html">Careers</a>
+            <a href="contact.html">Contact</a>
+            <a href="documentation.html">Documentation</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Resources</h4>
+          <nav class="footer-links">
+            <a href="resources.html">Research Papers</a>
+            <a href="resources.html">Whitepapers</a>
+            <a href="resources.html">Documentation</a>
+            <a href="resources.html">API Reference</a>
+            <a href="resources.html">Community</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <nav class="footer-links">
+            <a href="contact.html">Get in Touch</a>
+            <a href="contact.html">Request Demo</a>
+            <a href="contact.html">Support</a>
+            <a href="contact.html">Partners</a>
+            <a href="signin.html">Client Portal</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; Stackly AI & Robotics 2026. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

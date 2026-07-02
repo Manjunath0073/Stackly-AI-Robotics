@@ -1,0 +1,419 @@
+/* ============================================
+   GLOBAL RESPONSIVE STYLES — NeuroForge AI
+   Breakpoints: 1440px, 1024px, 768px, 480px, 320px
+   ============================================ */
+
+/* 1440px and below */
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer-grid .footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+  .solution-card-featured {
+    transform: translateY(0);
+  }
+  .solution-card-featured:hover {
+    transform: translateY(-6px);
+  }
+  .timeline-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .timeline-line {
+    display: none;
+  }
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .section {
+    padding: 3rem 0;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-actions .btn {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Hero */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-visual {
+    display: none;
+  }
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-metrics {
+    margin: 0 auto;
+  }
+  /* Solutions */
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .solution-card-featured {
+    transform: translateY(0);
+  }
+  .solution-card-featured:hover {
+    transform: translateY(-6px);
+  }
+  /* Platform */
+  .platform-row {
+    grid-template-columns: 1fr;
+  }
+  .platform-visual {
+    display: none;
+  }
+  /* Timeline */
+  .timeline-line {
+    display: none;
+  }
+  .timeline-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Impact */
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Industries */
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Tech Stack */
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  /* CTA */
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-trust {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-header-center {
+    margin-bottom: 2rem;
+  }
+  /* Partners */
+  .partners {
+    padding: 2rem 0;
+  }
+  .partners-label {
+    font-size: 0.55rem;
+  }
+  .partner-pill {
+    font-size: var(--fs-tiny);
+    padding: 0.5rem 1.25rem;
+  }
+  .partners-track {
+    gap: 1rem;
+  }
+  /* Voices */
+  .carousel-card {
+    padding: 1.5rem;
+  }
+}
+
+/* 480px and below */
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Hero */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn {
+    justify-content: center;
+  }
+  .hero-metrics {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .hero-metric-divider {
+    display: none;
+  }
+  /* Solutions */
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Timeline */
+  .timeline-steps {
+    grid-template-columns: 1fr;
+  }
+  .timeline-step {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  /* Impact */
+  .impact-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  /* Industries */
+  .industries-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  /* Tech Stack */
+  .stack-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* CTA */
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-actions .btn {
+    justify-content: center;
+  }
+  .cta-trust {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Partners */
+  .partners {
+    padding: 1.5rem 0;
+  }
+  .partner-pill {
+    padding: 0.4rem 1rem;
+    font-size: 0.6rem;
+  }
+  .partners-track {
+    gap: 0.75rem;
+  }
+  /* Voices */
+  .carousel-card {
+    padding: 1.25rem;
+  }
+  .carousel-quote {
+    font-size: var(--fs-small);
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+  .header-logo-text {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+  .header-logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .hamburger {
+    width: 36px;
+    height: 36px;
+  }
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.7rem;
+  }
+  .offcanvas {
+    width: 100vw;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+  .section-desc {
+    font-size: var(--fs-small);
+  }
+  .impact-number {
+    font-size: 1.75rem;
+  }
+  .timeline-step-marker {
+    width: 48px;
+    height: 48px;
+  }
+  .timeline-step-num {
+    font-size: 1rem;
+  }
+  /* Partners */
+  .partners {
+    padding: 1rem 0;
+  }
+  .partners-label {
+    font-size: 0.45rem;
+    margin-bottom: 1rem;
+  }
+  .partner-pill {
+    font-size: 0.45rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .partners-track {
+    gap: 0.5rem;
+  }
+  /* Solutions */
+  .solution-card {
+    padding: 1rem;
+  }
+  .solution-title {
+    font-size: 1rem;
+  }
+  .solution-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .solution-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .solution-desc {
+    font-size: 0.65rem;
+  }
+  /* Platform */
+  .platform-content-title {
+    font-size: var(--fs-h4);
+  }
+  .platform-content-desc {
+    font-size: var(--fs-small);
+  }
+  .platform-feature {
+    font-size: 0.65rem;
+  }
+  /* Projects */
+  .project-card-title {
+    font-size: 1rem;
+  }
+  .project-desc {
+    font-size: 0.65rem;
+  }
+  .project-stats {
+    gap: 0.25rem;
+  }
+  .project-stat-value {
+    font-size: 1rem;
+  }
+  .project-stat-label {
+    font-size: 0.5rem;
+  }
+  .project-body {
+    padding: 1rem;
+  }
+  .project-image-content {
+    padding: 1rem;
+  }
+  /* Industries */
+  .industry-name {
+    font-size: 1rem;
+  }
+  .industry-desc {
+    font-size: 0.55rem;
+  }
+  .industry-overlay {
+    padding: 1rem;
+  }
+  /* Tech Stack */
+  .stack-item-inner {
+    padding: 0.625rem;
+    gap: 0.5rem;
+  }
+  .stack-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .stack-label {
+    font-size: var(--fs-tiny);
+  }
+  /* Voices */
+  .carousel-card {
+    padding: 1rem;
+  }
+  .carousel-quote {
+    font-size: var(--fs-small);
+  }
+  /* CTA */
+  .cta-title {
+    font-size: var(--fs-h2);
+  }
+  .cta-desc {
+    font-size: var(--fs-small);
+  }
+  .footer-heading {
+    font-size: 0.75rem;
+  }
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+  }
+  .footer-social a svg {
+    width: 16px;
+    height: 16px;
+  }
+}
