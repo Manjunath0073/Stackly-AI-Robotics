@@ -65,34 +65,21 @@
 
   <!-- ============ MAIN ============ -->
   <div class="dash-main">
-    <!-- Top Bar -->
-    <header class="dash-topbar">
-      <div class="dash-topbar-left">
         <button class="dash-hamburger" id="dashHamburger">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
-        <div class="dash-topbar-greeting">
-          <h1 id="dashGreeting">Welcome back, Alex</h1>
-          <p>Here's what's happening with your platform today.</p>
+        <div class="dash-topbar-logo">
+          <a href="index.html" class="header-logo">
+            <div class="header-logo-icon">
+              <img src="assets/images/logo-stackly.webp" alt="Stackly AI" class="header-logo-img">
+            </div>
+          </a>
         </div>
-      </div>
-      <div class="dash-topbar-right">
-        <button class="dash-topbar-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <button class="dash-topbar-btn">
-          <span class="dash-notif-dot"></span>
+        <button class="dash-notif-btn" onclick="switchSection('notifications')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         </button>
       </div>
     </header>
-
-    <!-- Content -->
-    <div class="dash-content">
-
-      <!-- ===== Overview ===== -->
-      <section class="dash-section" data-section="overview">
-        <h2 class="dash-section-title">Dashboard Overview</h2>
         <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
         <p class="dash-section-sub">Your AI & robotics activity at a glance.</p>
         <div class="dash-stats">

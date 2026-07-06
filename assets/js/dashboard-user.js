@@ -122,13 +122,11 @@
     var nameEl = document.getElementById('dashName');
     var roleEl = document.getElementById('dashRole');
     var greetingEl = document.getElementById('dashGreeting');
-    var subEl = document.getElementById('dashSubGreeting');
     var emailEl = document.getElementById('dashEmail');
     if (avatarEl) avatarEl.textContent = userName.charAt(0).toUpperCase();
     if (nameEl) nameEl.textContent = userName;
     if (roleEl) roleEl.textContent = 'User';
     if (greetingEl) greetingEl.textContent = getGreeting() + ', ' + userName.split(' ')[0];
-    if (subEl) subEl.textContent = 'Here\'s what\'s happening with your platform today.';
     if (emailEl) emailEl.textContent = userEmail;
     var settingsName = document.getElementById('settingsName');
     var settingsEmail = document.getElementById('settingsEmail');
