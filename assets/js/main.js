@@ -302,4 +302,22 @@
     });
   });
 
+  /* ========================
+     NEWSLETTER SUBSCRIBE
+  ======================== */
+  window.handleNewsletter = function (e, form) {
+    e.preventDefault();
+    var parent = form.parentNode;
+    var existing = parent.querySelector('.footer-newsletter-success');
+    if (existing) existing.remove();
+    var msg = document.createElement('div');
+    msg.className = 'footer-newsletter-success';
+    msg.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Subscribed!';
+    parent.insertBefore(msg, form);
+    form.style.display = 'none';
+    setTimeout(function () {
+      form.style.display = '';
+      if (msg.parentNode) msg.remove();
+    }, 3000);
+  };
 })();

@@ -23,7 +23,7 @@
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --max-width: 1200px;
+  --max-width: 1400px;
   --header-height: 80px;
 
   --fs-display: clamp(2.5rem, 5vw, 4.5rem);
@@ -158,6 +158,7 @@ ul { list-style: none; }
 }
 .btn-cyan:hover {
   background: var(--clr-cyan-300);
+  color: var(--clr-navy-900);
   box-shadow: 0 0 30px var(--clr-cyan-glow);
   transform: translateY(-2px);
 }

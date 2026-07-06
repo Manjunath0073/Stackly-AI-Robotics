@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard — Stackly AI & Robotics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+<div class="dash">
+  <div class="dash-bg">
+    <div class="dash-grid"></div>
+  </div>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-sidebar-logo" style="padding:1.5rem 1.5rem 1.25rem;border-bottom:1px solid var(--glass-border);display:flex;align-items:center;">
+      <a href="index.html" class="header-logo" style="flex-shrink:0;">
+        <div class="header-logo-icon">
+          <img src="assets/images/logo-stackly.webp" alt="Stackly AI" class="header-logo-img">
+        </div>
+      </a>
+    </div>
+    <nav class="dash-sidebar-nav">
+      <a class="dash-nav-item active" data-section="overview" href="#" onclick="switchSection('overview');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span class="dash-nav-label">Overview</span>
+      </a>
+      <a class="dash-nav-item" data-section="projects" href="#" onclick="switchSection('projects');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <span class="dash-nav-label">My Projects</span>
+      </a>
+      <a class="dash-nav-item" data-section="analytics" href="#" onclick="switchSection('analytics');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        <span class="dash-nav-label">Analytics</span>
+      </a>
+      <a class="dash-nav-item" data-section="resources" href="#" onclick="switchSection('resources');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span class="dash-nav-label">Resource Hub</span>
+      </a>
+      <a class="dash-nav-item" data-section="notifications" href="#" onclick="switchSection('notifications');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="dash-nav-label">Notifications</span>
+        <span class="dash-nav-badge">3</span>
+      </a>
+      <a class="dash-nav-item" data-section="settings" href="#" onclick="switchSection('settings');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="dash-nav-label">Settings</span>
+      </a>
+    </nav>
+    <div class="dash-sidebar-footer">
+      <div class="dash-sidebar-avatar" id="dashAvatar">A</div>
+      <div class="dash-sidebar-user">
+        <div class="dash-sidebar-name" id="dashName">Alex Chen</div>
+        <div class="dash-sidebar-email" id="dashEmail" style="font-size:0.6rem;color:var(--clr-gray-500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">alex@stackly.ai</div>
+        <div class="dash-sidebar-role" id="dashRole">User</div>
+      </div>
+      <button class="dash-logout-btn" id="dashLogout" title="Logout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div class="dash-main">
+    <!-- Top Bar -->
+    <header class="dash-topbar">
+      <div class="dash-topbar-left">
+        <button class="dash-hamburger" id="dashHamburger">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="dash-topbar-greeting">
+          <h1 id="dashGreeting">Welcome back, Alex</h1>
+          <p>Here's what's happening with your platform today.</p>
+        </div>
+      </div>
+      <div class="dash-topbar-right">
+        <button class="dash-topbar-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="dash-topbar-btn">
+          <span class="dash-notif-dot"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="dash-content">
+
+      <!-- ===== Overview ===== -->
+      <section class="dash-section" data-section="overview">
+        <h2 class="dash-section-title">Dashboard Overview</h2>
+        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
+        <p class="dash-section-sub">Your AI & robotics activity at a glance.</p>
+        <div class="dash-stats">
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <span class="dash-stat-trend up">+12%</span>
+            </div>
+            <div class="dash-stat-value dash-count" data-target="24">0</div>
+            <div class="dash-stat-label">Active Projects</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="dash-stat-trend up">+18%</span>
+            </div>
+            <div class="dash-stat-value dash-count" data-target="1423">0</div>
+            <div class="dash-stat-label">Tasks Completed</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <span class="dash-stat-trend up">+7%</span>
+            </div>
+            <div class="dash-stat-value dash-count" data-target="847">0</div>
+            <div class="dash-stat-label">Hours Saved</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <span class="dash-stat-trend up">+5%</span>
+            </div>
+            <div class="dash-stat-value dash-count" data-target="18">0</div>
+            <div class="dash-stat-label">Team Members</div>
+          </div>
+        </div>
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Weekly Inference Activity</h3>
+            </div>
+            <div class="dash-chart-bars">
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">8.2K</span>
+                <div class="dash-chart-bar cyan" data-height="85" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Mon</span>
+              </div>
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">12.4K</span>
+                <div class="dash-chart-bar cyan" data-height="100" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Tue</span>
+              </div>
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">9.7K</span>
+                <div class="dash-chart-bar violet" data-height="78" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Wed</span>
+              </div>
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">11.2K</span>
+                <div class="dash-chart-bar green" data-height="92" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Thu</span>
+              </div>
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">14.8K</span>
+                <div class="dash-chart-bar cyan" data-height="96" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Fri</span>
+              </div>
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">6.3K</span>
+                <div class="dash-chart-bar violet" data-height="52" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Sat</span>
+              </div>
+              <div class="dash-chart-bar-wrap">
+                <span class="dash-chart-bar-value">4.1K</span>
+                <div class="dash-chart-bar amber" data-height="34" style="height:4px;"></div>
+                <span class="dash-chart-bar-label">Sun</span>
+              </div>
+            </div>
+            <div style="margin-top:1rem;display:flex;justify-content:space-between;font-size:0.65rem;color:var(--clr-gray-500);">
+              <span>Total: <strong style="color:var(--clr-gray-100);">66.7K</strong> inferences</span>
+              <span>Avg: <strong style="color:var(--clr-gray-100);">9.5K</strong>/day</span>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Recent Activity</h3>
+              <a href="#" onclick="switchSection('notifications')">View all</a>
+            </div>
+            <div class="dash-activity">
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot cyan"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Predictive Maintenance</strong> — Model training completed with 98.3% accuracy.</p>
+                  <span>12 minutes ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot violet"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Computer Vision</strong> — New dataset uploaded: 12,400 annotated images.</p>
+                  <span>1 hour ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot green"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Edge AI</strong> — Deployment to 4 edge nodes completed successfully.</p>
+                  <span>3 hours ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot amber"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Digital Twin</strong> — Simulation environment synchronized with live data.</p>
+                  <span>5 hours ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="dash-actions">
+            <a href="404.html" class="dash-action">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+              New Project
+            </a>
+            <a href="404.html" class="dash-action">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Upload Dataset
+            </a>
+            <a href="404.html" class="dash-action">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><polyline points="8 21 3 21 3 16"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              Deploy Model
+            </a>
+            <a href="404.html" class="dash-action">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              View Reports
+            </a>
+          </div>
+        </div>
+        <div class="dash-grid-2" style="margin-top:1.5rem;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Model Performance</h3>
+              <a href="404.html">View details</a>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div style="text-align:center;padding:0.75rem;background:rgba(0,229,255,0.05);border-radius:0.5rem;">
+                <div style="font-size:1.5rem;font-weight:700;color:#00E5FF;">98.3%</div>
+                <div style="font-size:0.65rem;color:var(--clr-gray-500);margin-top:0.15rem;">Accuracy</div>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:rgba(123,47,190,0.05);border-radius:0.5rem;">
+                <div style="font-size:1.5rem;font-weight:700;color:#7B2FBE;">97.1%</div>
+                <div style="font-size:0.65rem;color:var(--clr-gray-500);margin-top:0.15rem;">Precision</div>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:rgba(0,204,136,0.05);border-radius:0.5rem;">
+                <div style="font-size:1.5rem;font-weight:700;color:#00CC88;">96.8%</div>
+                <div style="font-size:0.65rem;color:var(--clr-gray-500);margin-top:0.15rem;">Recall</div>
+              </div>
+              <div style="text-align:center;padding:0.75rem;background:rgba(255,183,77,0.05);border-radius:0.5rem;">
+                <div style="font-size:1.5rem;font-weight:700;color:#FFB74D;">97.4%</div>
+                <div style="font-size:0.65rem;color:var(--clr-gray-500);margin-top:0.15rem;">F1 Score</div>
+              </div>
+            </div>
+            <div style="margin-top:0.75rem;font-size:0.6rem;color:var(--clr-gray-500);text-align:center;">Based on last 10,000 inference samples</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Storage Overview</h3>
+              <a href="404.html">Manage</a>
+            </div>
+            <div style="margin-bottom:0.75rem;">
+              <div style="display:flex;justify-content:space-between;font-size:0.75rem;margin-bottom:0.35rem;">
+                <span style="color:var(--clr-gray-300);">Used <strong>342 GB</strong> / 1 TB</span>
+                <span style="color:#00E5FF;font-weight:600;">34%</span>
+              </div>
+              <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:99px;overflow:hidden;">
+                <div style="height:100%;width:34%;background:linear-gradient(90deg,#00E5FF,#7B2FBE);border-radius:99px;"></div>
+              </div>
+            </div>
+            <div style="font-size:0.65rem;color:var(--clr-gray-500);">
+            <span class="dash-live-dot"></span> Last synced 2 min ago
+          </div>
+        </div>
+        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Advanced Insights</h3>
+            <a href="404.html" style="color:#FFB800;">Explore</a>
+          </div>
+          <div class="dash-premium-grid">
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <h4>Predictive Analytics</h4>
+              <p>AI-powered forecasting for resource usage, costs, and model performance.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h4>Priority Compute</h4>
+              <p>Dedicated GPU clusters with zero queue time for training jobs.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+              <h4>Dedicated Support</h4>
+              <p>24/7 priority support with assigned solutions engineer.</p>
+            </div>
+          </div>
+          <div class="dash-premium-upgrade">
+            <p><strong>Unlock the full Stackly experience.</strong> Get advanced analytics, priority compute, and dedicated support.</p>
+            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== My Projects ===== -->
+      <section class="dash-section" data-section="projects">
+        <h2 class="dash-section-title">My Projects</h2>
+        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
+        <p class="dash-section-sub">Manage and monitor your active AI & robotics projects.</p>
+        <div class="dash-projects">
+          <div class="dash-project">
+            <div class="dash-project-top">
+              <div class="dash-project-icon" style="background:rgba(0,229,255,0.1);color:var(--clr-cyan-400);">P</div>
+              <span class="dash-project-status live">Live</span>
+            </div>
+            <h4>Predictive Maintenance</h4>
+            <p>Real-time equipment failure prediction using deep learning sensor fusion.</p>
+            <div class="dash-project-progress">
+              <div class="bar"><div class="bar-fill cyan" style="width:92%"></div></div>
+              <div class="label"><span>Progress</span><span>92%</span></div>
+            </div>
+          </div>
+          <div class="dash-project">
+            <div class="dash-project-top">
+              <div class="dash-project-icon" style="background:rgba(123,47,190,0.1);color:var(--clr-violet-300);">C</div>
+              <span class="dash-project-status staging">Staging</span>
+            </div>
+            <h4>Computer Vision</h4>
+            <p>Automated quality inspection system with real-time defect detection.</p>
+            <div class="dash-project-progress">
+              <div class="bar"><div class="bar-fill violet" style="width:78%"></div></div>
+              <div class="label"><span>Progress</span><span>78%</span></div>
+            </div>
+          </div>
+          <div class="dash-project">
+            <div class="dash-project-top">
+              <div class="dash-project-icon" style="background:rgba(0,204,136,0.1);color:#00CC88;">N</div>
+              <span class="dash-project-status dev">In Dev</span>
+            </div>
+            <h4>Autonomous Navigation</h4>
+            <p>SLAM-based navigation system for warehouse robotics and logistics.</p>
+            <div class="dash-project-progress">
+              <div class="bar"><div class="bar-fill green" style="width:55%"></div></div>
+              <div class="label"><span>Progress</span><span>55%</span></div>
+            </div>
+          </div>
+          <div class="dash-project">
+            <div class="dash-project-top">
+              <div class="dash-project-icon" style="background:rgba(255,183,77,0.1);color:#FFB74D;">E</div>
+              <span class="dash-project-status pending">Pending</span>
+            </div>
+            <h4>Edge AI Deployment</h4>
+            <p>Optimized inference engine for edge devices with real-time processing.</p>
+            <div class="dash-project-progress">
+              <div class="bar"><div class="bar-fill cyan" style="width:32%"></div></div>
+              <div class="label"><span>Progress</span><span>32%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3>Project Timeline</h3>
+            <a href="404.html">Full schedule</a>
+          </div>
+          <div style="position:relative;padding-left:1.25rem;">
+            <div style="position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:linear-gradient(180deg,#00E5FF,#7B2FBE,#00CC88,#FFB74D);border-radius:2px;"></div>
+            <div style="position:relative;margin-bottom:1rem;">
+              <div style="position:absolute;left:-1.1rem;top:0.15rem;width:10px;height:10px;border-radius:50%;background:#00E5FF;border:2px solid rgba(0,229,255,0.3);"></div>
+              <p style="font-size:0.75rem;font-weight:600;color:var(--clr-gray-100);">Q1 2026 — Foundation</p>
+              <p style="font-size:0.6rem;color:var(--clr-gray-500);">Core infrastructure, sensor integration, baseline models completed.</p>
+            </div>
+            <div style="position:relative;margin-bottom:1rem;">
+              <div style="position:absolute;left:-1.1rem;top:0.15rem;width:10px;height:10px;border-radius:50%;background:#7B2FBE;border:2px solid rgba(123,47,190,0.3);"></div>
+              <p style="font-size:0.75rem;font-weight:600;color:var(--clr-gray-100);">Q2 2026 — Expansion</p>
+              <p style="font-size:0.6rem;color:var(--clr-gray-500);">Multi-region deployment, edge node rollout, performance tuning.</p>
+            </div>
+            <div style="position:relative;margin-bottom:1rem;">
+              <div style="position:absolute;left:-1.1rem;top:0.15rem;width:10px;height:10px;border-radius:50%;background:#00CC88;border:2px solid rgba(0,204,136,0.3);"></div>
+              <p style="font-size:0.75rem;font-weight:600;color:var(--clr-gray-100);">Q3 2026 — Optimization</p>
+              <p style="font-size:0.6rem;color:var(--clr-gray-500);">Model compression, latency reduction, automated retraining pipeline.</p>
+            </div>
+            <div style="position:relative;">
+              <div style="position:absolute;left:-1.1rem;top:0.15rem;width:10px;height:10px;border-radius:50%;background:#FFB74D;border:2px solid rgba(255,183,77,0.3);"></div>
+              <p style="font-size:0.75rem;font-weight:600;color:var(--clr-gray-100);">Q4 2026 — Scale</p>
+              <p style="font-size:0.6rem;color:var(--clr-gray-500);">Production scaling, SLA guarantees, enterprise feature completion.</p>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Unlimited Projects</h3>
+            <a href="404.html" style="color:#FFB800;">Explore</a>
+          </div>
+          <div class="dash-premium-grid">
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+              <h4>Unlimited Projects</h4>
+              <p>Create and manage unlimited concurrent AI & robotics projects.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <h4>Parallel Training</h4>
+              <p>Run multiple model training jobs simultaneously across GPU clusters.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><polyline points="8 21 3 21 3 16"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+              <h4>Priority Deployments</h4>
+              <p>Expedited model deployment with zero-downtime rollout strategy.</p>
+            </div>
+          </div>
+          <div class="dash-premium-upgrade">
+            <p><strong>Scale your projects further.</strong> Unlimited concurrent projects, parallel training, and priority deployment.</p>
+            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Analytics ===== -->
+      <section class="dash-section" data-section="analytics">
+        <h2 class="dash-section-title">Analytics</h2>
+        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
+        <p class="dash-section-sub">Performance metrics and usage statistics for your projects.</p>
+        <div class="dash-stats">
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <span class="dash-stat-trend up">+23%</span>
+            </div>
+            <div class="dash-stat-value">98.3%</div>
+            <div class="dash-stat-label">Model Accuracy</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <span class="dash-stat-trend up">+15%</span>
+            </div>
+            <div class="dash-stat-value">2.4ms</div>
+            <div class="dash-stat-label">Avg Inference Time</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <span class="dash-stat-trend up">+8%</span>
+            </div>
+            <div class="dash-stat-value">99.97%</div>
+            <div class="dash-stat-label">System Uptime</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-header">
+              <div class="dash-stat-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <span class="dash-stat-trend up">+31%</span>
+            </div>
+            <div class="dash-stat-value">84.7K</div>
+            <div class="dash-stat-label">API Calls (Today)</div>
+          </div>
+        </div>
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Weekly Performance</h3>
+            </div>
+            <div class="dash-activity">
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot cyan"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Monday</strong> — 12,847 inferences processed. Peak at 14:32 UTC.</p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot green"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Tuesday</strong> — Model retrained. Accuracy improved from 96.1% to 98.3%.</p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot violet"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Wednesday</strong> — New edge node deployed in Frankfurt region.</p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot amber"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Thursday</strong> — Dataset version 3.2 released with 8,400 new samples.</p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot cyan"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Friday</strong> — Automated pipeline processed 24K+ hours of sensor data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Top Models</h3>
+            </div>
+            <div class="dash-status-list">
+              <div class="dash-status-item">
+                <div class="dash-status-left">
+                  <span class="dash-status-dot green"></span>
+                  <div><div class="dash-status-name">Predictive Maintenance v4</div><div class="dash-status-meta">98.3% accuracy · 2.1ms latency</div></div>
+                </div>
+                <span class="dash-status-pct" style="color:#00CC88;">#1</span>
+              </div>
+              <div class="dash-status-item">
+                <div class="dash-status-left">
+                  <span class="dash-status-dot green"></span>
+                  <div><div class="dash-status-name">Vision Inspector v2</div><div class="dash-status-meta">97.8% accuracy · 3.4ms latency</div></div>
+                </div>
+                <span class="dash-status-pct" style="color:#00CC88;">#2</span>
+              </div>
+              <div class="dash-status-item">
+                <div class="dash-status-left">
+                  <span class="dash-status-dot yellow"></span>
+                  <div><div class="dash-status-name">SLAM Navigator v1</div><div class="dash-status-meta">94.2% accuracy · 5.7ms latency</div></div>
+                </div>
+                <span class="dash-status-pct" style="color:#FFB74D;">#3</span>
+              </div>
+              <div class="dash-status-item">
+                <div class="dash-status-left">
+                  <span class="dash-status-dot yellow"></span>
+                  <div><div class="dash-status-name">Edge Optimizer v3</div><div class="dash-status-meta">91.5% accuracy · 1.8ms latency</div></div>
+                </div>
+                <span class="dash-status-pct" style="color:#FFB74D;">#4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-grid-2" style="margin-top:1.5rem;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Model Comparison</h3>
+              <a href="404.html">Compare all</a>
+            </div>
+            <div style="overflow-x:auto;">
+              <table style="width:100%;border-collapse:collapse;font-size:0.65rem;">
+                <thead>
+                  <tr style="border-bottom:1px solid var(--glass-border);">
+                    <th style="text-align:left;padding:0.5rem 0.4rem;color:var(--clr-gray-500);font-weight:500;">Model</th>
+                    <th style="text-align:right;padding:0.5rem 0.4rem;color:var(--clr-gray-500);font-weight:500;">Accuracy</th>
+                    <th style="text-align:right;padding:0.5rem 0.4rem;color:var(--clr-gray-500);font-weight:500;">Latency</th>
+                    <th style="text-align:right;padding:0.5rem 0.4rem;color:var(--clr-gray-500);font-weight:500;">Size</th>
+                    <th style="text-align:center;padding:0.5rem 0.4rem;color:var(--clr-gray-500);font-weight:500;">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid var(--glass-border);">
+                    <td style="padding:0.5rem 0.4rem;color:var(--clr-gray-100);font-weight:500;">Predictive v4</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:#00E5FF;">98.3%</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:var(--clr-gray-300);">2.1ms</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:var(--clr-gray-300);">847 MB</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:center;"><span style="display:inline-block;padding:0.1rem 0.4rem;border-radius:99px;background:rgba(0,204,136,0.15);color:#00CC88;font-size:0.6rem;">Active</span></td>
+                  </tr>
+                  <tr style="border-bottom:1px solid var(--glass-border);">
+                    <td style="padding:0.5rem 0.4rem;color:var(--clr-gray-100);font-weight:500;">Vision v2</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:#7B2FBE;">97.8%</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:var(--clr-gray-300);">3.4ms</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:var(--clr-gray-300);">1.2 GB</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:center;"><span style="display:inline-block;padding:0.1rem 0.4rem;border-radius:99px;background:rgba(0,204,136,0.15);color:#00CC88;font-size:0.6rem;">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:0.5rem 0.4rem;color:var(--clr-gray-100);font-weight:500;">SLAM Nav v1</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:#FFB74D;">94.2%</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:var(--clr-gray-300);">5.7ms</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:right;color:var(--clr-gray-300);">2.4 GB</td>
+                    <td style="padding:0.5rem 0.4rem;text-align:center;"><span style="display:inline-block;padding:0.1rem 0.4rem;border-radius:99px;background:rgba(255,183,77,0.15);color:#FFB74D;font-size:0.6rem;">Staging</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Cost Analysis</h3>
+              <a href="404.html">Full breakdown</a>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+              <div style="padding:0.75rem;background:rgba(0,229,255,0.05);border-radius:0.5rem;">
+                <div style="font-size:0.6rem;color:var(--clr-gray-500);">Compute Cost</div>
+                <div style="font-size:1.1rem;font-weight:700;color:var(--clr-gray-100);">$2,847</div>
+              </div>
+              <div style="padding:0.75rem;background:rgba(123,47,190,0.05);border-radius:0.5rem;">
+                <div style="font-size:0.6rem;color:var(--clr-gray-500);">Storage</div>
+                <div style="font-size:1.1rem;font-weight:700;color:var(--clr-gray-100);">$892</div>
+              </div>
+              <div style="padding:0.75rem;background:rgba(0,204,136,0.05);border-radius:0.5rem;">
+                <div style="font-size:0.6rem;color:var(--clr-gray-500);">Bandwidth</div>
+                <div style="font-size:1.1rem;font-weight:700;color:var(--clr-gray-100);">$1,234</div>
+              </div>
+              <div style="padding:0.75rem;background:rgba(255,183,77,0.05);border-radius:0.5rem;">
+                <div style="font-size:0.6rem;color:var(--clr-gray-500);">Total</div>
+                <div style="font-size:1.1rem;font-weight:700;color:var(--clr-gray-100);">$4,973</div>
+              </div>
+            </div>
+            <div style="margin-top:0.75rem;font-size:0.6rem;color:var(--clr-gray-500);text-align:center;">Monthly estimate — current billing cycle</div>
+          </div>
+        </div>
+        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Advanced Analytics</h3>
+            <a href="404.html" style="color:#FFB800;">Explore</a>
+          </div>
+          <div class="dash-premium-grid">
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+              <h4>Custom Dashboards</h4>
+              <p>Create personalized dashboards with custom metrics and KPIs.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+              <h4>Data Export</h4>
+              <p>Export raw metrics and reports to CSV, JSON, or integrate via API.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+              <h4>Historical Trends</h4>
+              <p>Unlimited historical data retention with year-over-year comparisons.</p>
+            </div>
+          </div>
+          <div class="dash-premium-upgrade">
+            <p><strong>Go beyond basic metrics.</strong> Custom dashboards, data export, and unlimited history with Premium.</p>
+            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Resource Hub ===== -->
+      <section class="dash-section" data-section="resources">
+        <h2 class="dash-section-title">Resource Hub</h2>
+        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
+        <p class="dash-section-sub">Documentation, tools, and learning materials at your fingertips.</p>
+        <div class="dash-resources">
+          <div class="dash-resource">
+            <div class="dash-resource-icon" style="background:rgba(0,229,255,0.1);color:var(--clr-cyan-400);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h4>API Documentation</h4>
+            <p>Complete reference for all Stackly AI APIs, endpoints, and SDKs.</p>
+          </div>
+          <div class="dash-resource">
+            <div class="dash-resource-icon" style="background:rgba(123,47,190,0.1);color:var(--clr-violet-300);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Video Tutorials</h4>
+            <p>Step-by-step guides covering model training, deployment, and monitoring.</p>
+          </div>
+          <div class="dash-resource">
+            <div class="dash-resource-icon" style="background:rgba(0,204,136,0.1);color:#00CC88;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h4>Research Papers</h4>
+            <p>Latest academic publications and internal research on AI & robotics.</p>
+          </div>
+          <div class="dash-resource">
+            <div class="dash-resource-icon" style="background:rgba(255,183,77,0.1);color:#FFB74D;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><polyline points="8 21 3 21 3 16"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            </div>
+            <h4>Model Zoo</h4>
+            <p>Pre-trained models for computer vision, NLP, and predictive analytics.</p>
+          </div>
+          <div class="dash-resource">
+            <div class="dash-resource-icon" style="background:rgba(0,229,255,0.1);color:var(--clr-cyan-400);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h4>SDK & Tools</h4>
+            <p>Client libraries, CLI tools, and integrations for popular frameworks.</p>
+          </div>
+          <div class="dash-resource">
+            <div class="dash-resource-icon" style="background:rgba(123,47,190,0.1);color:var(--clr-violet-300);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h4>Security Guide</h4>
+            <p>Best practices for securing your models, data, and deployment pipeline.</p>
+          </div>
+        </div>
+        <div class="dash-card" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3>Recently Added</h3>
+            <a href="404.html">Browse all</a>
+          </div>
+          <div class="dash-activity">
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot cyan"></span>
+              <div class="dash-activity-text">
+                <p><strong>LLM Fine-tuning Guide</strong> — Best practices for adapting large language models to domain-specific tasks.</p>
+                <span>Added 2 days ago</span>
+              </div>
+            </div>
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot violet"></span>
+              <div class="dash-activity-text">
+                <p><strong>Robotics Simulation Toolkit v3</strong> — Updated simulation environment with physics engine improvements.</p>
+                <span>Added 5 days ago</span>
+              </div>
+            </div>
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot green"></span>
+              <div class="dash-activity-text">
+                <p><strong>Model Monitoring Dashboard</strong> — Real-time visualization template for tracking model drift and performance.</p>
+                <span>Added 1 week ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Exclusive Resources</h3>
+            <a href="404.html" style="color:#FFB800;">Explore</a>
+          </div>
+          <div class="dash-premium-grid">
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+              <h4>Exclusive Research</h4>
+              <p>Access to internal research papers, whitepapers, and case studies.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <h4>Early Access</h4>
+              <p>Be first to try new features, models, and beta releases.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <h4>Expert Sessions</h4>
+              <p>Monthly 1-on-1 sessions with Stackly AI engineers and researchers.</p>
+            </div>
+          </div>
+          <div class="dash-premium-upgrade">
+            <p><strong>Get more from your resources.</strong> Exclusive research, early access, and expert guidance.</p>
+            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Notifications ===== -->
+      <section class="dash-section" data-section="notifications">
+        <h2 class="dash-section-title">Notifications</h2>
+        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
+        <p class="dash-section-sub">Stay updated with the latest activities and alerts.</p>
+        <div class="dash-notif-list">
+          <div class="dash-notif">
+            <div class="dash-notif-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="dash-notif-content">
+              <p><strong>Model Training Complete</strong> — Predictive Maintenance v4 achieved 98.3% accuracy.</p>
+              <span>12 minutes ago</span>
+            </div>
+          </div>
+          <div class="dash-notif">
+            <div class="dash-notif-icon info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </div>
+            <div class="dash-notif-content">
+              <p><strong>New Dataset Available</strong> — 12,400 annotated images added to Computer Vision project.</p>
+              <span>1 hour ago</span>
+            </div>
+          </div>
+          <div class="dash-notif">
+            <div class="dash-notif-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="dash-notif-content">
+              <p><strong>Edge Deployment Successful</strong> — Edge AI model deployed to 4 nodes in Frankfurt.</p>
+              <span>3 hours ago</span>
+            </div>
+          </div>
+          <div class="dash-notif">
+            <div class="dash-notif-icon warn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="dash-notif-content">
+              <p><strong>Resource Warning</strong> — Project "Autonomous Navigation" is approaching compute quota.</p>
+              <span>5 hours ago</span>
+            </div>
+          </div>
+          <div class="dash-notif">
+            <div class="dash-notif-icon info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </div>
+            <div class="dash-notif-content">
+              <p><strong>Simulation Sync</strong> — Digital Twin environment synchronized with live production data.</p>
+              <span>8 hours ago</span>
+            </div>
+          </div>
+          <div class="dash-notif">
+            <div class="dash-notif-icon alert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="dash-notif-content">
+              <p><strong>Pipeline Failure</strong> — Automated data pipeline encountered a connection timeout. Retrying.</p>
+              <span>Yesterday at 23:14</span>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3>Notification Settings</h3>
+            <a href="404.html">Configure</a>
+          </div>
+          <div class="dash-status-list">
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot green"></span>
+                <div><div class="dash-status-name">Push Notifications</div><div class="dash-status-meta">Browser & mobile push alerts</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#00CC88;">Enabled</span>
+            </div>
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot green"></span>
+                <div><div class="dash-status-name">Email Notifications</div><div class="dash-status-meta">Daily digest & critical alerts</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#00CC88;">Enabled</span>
+            </div>
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot yellow"></span>
+                <div><div class="dash-status-name">SMS Alerts</div><div class="dash-status-meta">Urgent system alerts only</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#FFB74D;">Disabled</span>
+            </div>
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot green"></span>
+                <div><div class="dash-status-name">In-app Notifications</div><div class="dash-status-meta">Real-time dashboard alerts</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#00CC88;">Enabled</span>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Smart Alerts</h3>
+            <a href="404.html" style="color:#FFB800;">Configure</a>
+          </div>
+          <div class="dash-premium-grid">
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <h4>SMS Alerts</h4>
+              <p>Real-time SMS notifications for critical model and system events.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"/><path d="M22 6l-10 7L2 6"/></svg></div>
+              <h4>Slack Integration</h4>
+              <p>Direct alerts to your Slack channels with customizable routing.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+              <h4>Webhook API</h4>
+              <p>Custom webhook endpoints for integrating with your own toolchain.</p>
+            </div>
+          </div>
+          <div class="dash-premium-upgrade">
+            <p><strong>Never miss a critical alert.</strong> SMS, Slack, and custom webhook integrations with Premium.</p>
+            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Settings ===== -->
+      <section class="dash-section" data-section="settings">
+        <h2 class="dash-section-title">Settings</h2>
+        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
+        <p class="dash-section-sub">Manage your account preferences and profile settings.</p>
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Profile</h3></div>
+            <div class="dash-activity">
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot cyan"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Display Name</strong><br><span id="settingsName" style="color:var(--clr-gray-300);font-size:var(--fs-small)">Alex Chen</span></p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot green"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Email</strong><br><span id="settingsEmail" style="color:var(--clr-gray-300);font-size:var(--fs-small)">alex@stackly.ai</span></p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot violet"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Role</strong><br><span id="settingsRole" style="color:var(--clr-gray-300);font-size:var(--fs-small)">User</span></p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot amber"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Member Since</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">March 2026</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Preferences</h3></div>
+            <div class="dash-activity">
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot cyan"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Email Notifications</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">Weekly digest · Model alerts</span></p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot green"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Theme</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">Dark mode (default)</span></p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot violet"></span>
+                <div class="dash-activity-text">
+                  <p><strong>Language</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">English (US)</span></p>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <span class="dash-activity-dot amber"></span>
+                <div class="dash-activity-text">
+                  <p><strong>API Key</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">sk-••••••••••••••••</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-header"><h3>Notification Preferences</h3></div>
+          <div class="dash-status-list">
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot green"></span>
+                <div><div class="dash-status-name">Model Training Complete</div><div class="dash-status-meta">Push · Email</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#00CC88;">Active</span>
+            </div>
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot green"></span>
+                <div><div class="dash-status-name">Deployment Status</div><div class="dash-status-meta">Push · Email · Slack</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#00CC88;">Active</span>
+            </div>
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot green"></span>
+                <div><div class="dash-status-name">Resource Quota Warnings</div><div class="dash-status-meta">Email only</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#00CC88;">Active</span>
+            </div>
+            <div class="dash-status-item">
+              <div class="dash-status-left">
+                <span class="dash-status-dot yellow"></span>
+                <div><div class="dash-status-name">Weekly Performance Report</div><div class="dash-status-meta">Email</div></div>
+              </div>
+              <span class="dash-status-pct" style="color:#FFB74D;">Weekly</span>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3>Security</h3>
+            <a href="404.html">Manage</a>
+          </div>
+          <div class="dash-activity">
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot cyan"></span>
+              <div class="dash-activity-text">
+                <p><strong>Last Password Change</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">2 weeks ago</span></p>
+              </div>
+            </div>
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot yellow"></span>
+              <div class="dash-activity-text">
+                <p><strong>Two-Factor Authentication</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">Disabled · <a href="404.html" style="color:#00E5FF;text-decoration:none;">Enable now</a></span></p>
+              </div>
+            </div>
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot green"></span>
+              <div class="dash-activity-text">
+                <p><strong>Active Sessions</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">3 devices · <a href="404.html" style="color:#00E5FF;text-decoration:none;">Manage</a></span></p>
+              </div>
+            </div>
+            <div class="dash-activity-item">
+              <span class="dash-activity-dot violet"></span>
+              <div class="dash-activity-text">
+                <p><strong>Last Login IP</strong><br><span style="color:var(--clr-gray-300);font-size:var(--fs-small)">203.0.113.42</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
+          <div class="dash-card-header">
+            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Enterprise Settings</h3>
+            <a href="404.html" style="color:#FFB800;">Manage</a>
+          </div>
+          <div class="dash-premium-grid">
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h4>Single Sign-On</h4>
+              <p>SAML, OAuth, and OpenID Connect with your existing identity provider.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+              <h4>Audit Logs</h4>
+              <p>Detailed activity logs with 12-month retention and export capabilities.</p>
+            </div>
+            <div class="dash-premium-item">
+              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <h4>Custom Branding</h4>
+              <p>White-label dashboard with your own logo, colors, and domain.</p>
+            </div>
+          </div>
+          <div class="dash-premium-upgrade">
+            <p><strong>Enterprise-grade settings.</strong> SSO, audit logs, and custom branding with Premium.</p>
+            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/dashboard-user.js"></script>
+</body>
+</html>
