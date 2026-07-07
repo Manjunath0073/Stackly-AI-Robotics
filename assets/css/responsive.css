@@ -180,6 +180,23 @@
     justify-content: center;
   }
   /* Hero */
+  .hero {
+    min-height: 0;
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 3rem;
+  }
+  .hero-glow-orb {
+    width: 300px;
+    height: 300px;
+  }
+  .hero-glow-orb-2 {
+    width: 200px;
+    height: 200px;
+  }
+  .hero-particle {
+    animation: none;
+    opacity: 0.15;
+  }
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
@@ -264,6 +281,34 @@
   }
 }
 
+/* Reduced motion: disable heavy animations on mobile */
+@media (prefers-reduced-motion: reduce) {
+  .hero-particle,
+  .hero-glow-orb,
+  .hero-cube-ring,
+  .hero-cube,
+  .cta-orb,
+  .partners-track {
+    animation: none !important;
+  }
+  .hero-particle {
+    opacity: 0.15;
+  }
+  .fade-up,
+  .fade-left,
+  .fade-right,
+  .scale-in,
+  .blur-in,
+  .stagger-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .stagger-children > * {
+    transition-delay: 0s !important;
+  }
+}
+
 /* 320px and below */
 @media (max-width: 320px) {
   .header-logo-text {
@@ -287,6 +332,9 @@
   }
   .hero-title {
     font-size: 1.75rem;
+  }
+  .hero-desc {
+    font-size: var(--fs-small);
   }
   .section-title {
     font-size: 1.25rem;
@@ -655,16 +703,46 @@
 
 /* 768px and below */
 @media (max-width: 768px) {
+  .about-hero {
+    min-height: 0;
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 3rem;
+  }
+  .about-hero-glow {
+    width: 300px;
+    height: 300px;
+  }
+  .about-hero-glow-2 {
+    width: 200px;
+    height: 200px;
+  }
+  .about-hero-content {
+    text-align: center;
+  }
+  .about-hero-tag {
+    justify-content: center;
+  }
+  .about-hero-title {
+    font-size: var(--fs-h1);
+  }
+  .about-hero-desc {
+    margin: 0 auto 2rem;
+  }
+  .about-hero-actions {
+    justify-content: center;
+  }
   .about-hero-stats {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 1rem;
+    justify-content: center;
   }
   .about-hero-stat-divider {
     display: none;
   }
   .about-hero-scroll {
     display: none;
+  }
+  .about-mission-grid {
+    grid-template-columns: 1fr;
   }
   .about-values-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -685,13 +763,6 @@
     align-items: stretch;
   }
   .about-culture-actions .btn {
-    justify-content: center;
-  }
-  .about-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .about-hero-actions .btn {
     justify-content: center;
   }
 }
