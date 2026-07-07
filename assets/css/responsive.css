@@ -48,8 +48,8 @@
   }
 }
 
-/* 768px and below */
-@media (max-width: 768px) {
+/* 850px and below - use offcanvas for tablets */
+@media (max-width: 850px) {
   .container {
     max-width: 100%;
   }
@@ -64,6 +64,61 @@
   }
   .hamburger {
     display: flex;
+  }
+  .offcanvas {
+    width: 100vw;
+    height: 100dvh;
+    border-left: none;
+  }
+  .offcanvas-nav {
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .offcanvas-nav a {
+    text-align: center;
+    font-size: var(--fs-h3);
+    padding: 1rem 2rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 850px - 1100px (touch-friendly intermediate) */
+@media (min-width: 850px) and (max-width: 1100px) {
+  .header-nav a {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--fs-small);
+    letter-spacing: 0.5px;
+  }
+  .header-actions .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: var(--fs-tiny);
+  }
+  .header-logo-img {
+    width: 140px;
+  }
+}
+
+/* 1100px and above - full desktop */
+@media (min-width: 1100px) {
+  .header-nav a {
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+/* 768px and below (retain existing mobile styles) */
+@media (max-width: 768px) {
+  .offcanvas-nav {
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .offcanvas-nav a {
+    text-align: center;
+    font-size: var(--fs-h3);
+    padding: 1rem 2rem;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;

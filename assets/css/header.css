@@ -150,13 +150,12 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Offcanvas Menu */
+  /* Offcanvas Menu */
 .offcanvas {
   position: fixed;
   top: 0;
   right: -100%;
-  width: min(320px, 85vw);
-  height: 100vh;
+  height: 100dvh;
   background: var(--clr-navy-800);
   border-left: 1px solid var(--glass-border);
   z-index: 1001;
