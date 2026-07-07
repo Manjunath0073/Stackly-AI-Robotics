@@ -285,7 +285,8 @@
           btn.innerHTML = '<span class="auth-spinner"></span> Logging In...';
           var selectedRole = (document.querySelector('input[name="loginRole"]:checked') || {}).value || 'user';
           localStorage.setItem('authRole', selectedRole);
-          localStorage.setItem('authName', 'Alex Chen');
+          var nameFromEmail = email.value.trim().split('@')[0].replace(/[._-]/g, ' ').replace(/\b\w/g, function(l){return l.toUpperCase();});
+          localStorage.setItem('authName', nameFromEmail || email.value.trim().split('@')[0]);
           localStorage.setItem('authEmail', email.value.trim());
           setTimeout(function () {
             form.innerHTML =

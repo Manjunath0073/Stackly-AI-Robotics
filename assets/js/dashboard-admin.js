@@ -4,12 +4,14 @@
   var userName = localStorage.getItem('authName') || 'Alex Chen';
   var userEmail = localStorage.getItem('authEmail') || 'alex@stackly.ai';
 
-  function getGreeting() {
-    var h = new Date().getHours();
-    if (h < 12) return 'Good morning';
-    if (h < 18) return 'Good afternoon';
-    return 'Good evening';
-  }
+  var sectionTitles = {
+    overview: 'Overview',
+    health: 'System Health',
+    users: 'User Management',
+    analytics: 'Analytics',
+    deployments: 'Deployments',
+    security: 'Security'
+  };
 
   function animateCounters(root) {
     var els = (root || document).querySelectorAll('.dash-count');
@@ -78,6 +80,10 @@
     if (sidebar.classList.contains('open')) {
       sidebar.classList.remove('open');
     }
+    var titleEl = document.getElementById('dashSectionTitle');
+    if (titleEl && sectionTitles[id]) {
+      titleEl.textContent = sectionTitles[id];
+    }
     if (activeSection) {
       animateCounters(activeSection);
       animateRings(activeSection);
@@ -121,14 +127,10 @@
     var avatarEl = document.getElementById('dashAvatar');
     var nameEl = document.getElementById('dashName');
     var roleEl = document.getElementById('dashRole');
-    var greetingEl = document.getElementById('dashGreeting');
-    var subEl = document.getElementById('dashSubGreeting');
     var emailEl = document.getElementById('dashEmail');
     if (avatarEl) avatarEl.textContent = userName.charAt(0).toUpperCase();
     if (nameEl) nameEl.textContent = userName;
     if (roleEl) roleEl.textContent = 'Administrator';
-    if (greetingEl) greetingEl.textContent = getGreeting() + ', ' + userName.split(' ')[0];
-    if (subEl) subEl.textContent = 'Here\'s what\'s happening across your platform today.';
     if (emailEl) emailEl.textContent = userEmail;
   }
 

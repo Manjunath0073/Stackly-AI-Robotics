@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard — Stackly AI & Robotics</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/dashboard.css?v=2">
 </head>
 <body>
 
@@ -32,11 +32,6 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         <span class="dash-nav-label">System Health</span>
       </a>
-      <a class="dash-nav-item" data-section="users" href="#" onclick="switchSection('users');return false;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span class="dash-nav-label">Users</span>
-        <span class="dash-nav-badge">12</span>
-      </a>
       <a class="dash-nav-item" data-section="analytics" href="#" onclick="switchSection('analytics');return false;">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
         <span class="dash-nav-label">Analytics</span>
@@ -51,11 +46,13 @@
       </a>
     </nav>
     <div class="dash-sidebar-footer">
-      <div class="dash-sidebar-avatar" id="dashAvatar">A</div>
-      <div class="dash-sidebar-user">
-        <div class="dash-sidebar-name" id="dashName">Alex Chen</div>
-        <div class="dash-sidebar-email" id="dashEmail" style="font-size:0.6rem;color:var(--clr-gray-500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">alex@stackly.ai</div>
-        <div class="dash-sidebar-role" id="dashRole">Administrator</div>
+      <div class="dash-sidebar-user-row">
+        <div class="dash-sidebar-avatar" id="dashAvatar">A</div>
+        <div class="dash-sidebar-user">
+          <div class="dash-sidebar-name" id="dashName">Alex Chen</div>
+          <div class="dash-sidebar-email" id="dashEmail" style="font-size:0.6rem;color:var(--clr-gray-500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">alex@stackly.ai</div>
+          <div class="dash-sidebar-role" id="dashRole">Administrator</div>
+        </div>
       </div>
       <button class="dash-logout-btn" id="dashLogout" title="Logout">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
@@ -68,10 +65,14 @@
     <!-- Top Bar -->
     <header class="dash-topbar">
       <div class="dash-topbar-left">
-<button class="dash-hamburger" id="dashHamburger">
+        <button class="dash-hamburger" id="dashHamburger">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
-        <div class="dash-topbar-right">
+        <div class="dash-topbar-greeting">
+          <h1 id="dashSectionTitle">Overview</h1>
+        </div>
+      </div>
+      <div class="dash-topbar-right">
         <button class="dash-topbar-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </button>
@@ -303,7 +304,7 @@
         <div class="dash-card dash-premium" style="margin-top:1.5rem;">
           <div class="dash-card-header">
             <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Platform Command Center</h3>
-            <a href="404.html" style="color:#FFB800;">Explore</a>
+            <a href="404.html" style="color:var(--clr-cyan-400);">Explore</a>
           </div>
           <div class="dash-premium-grid">
             <div class="dash-premium-item">
@@ -464,7 +465,7 @@
         <div class="dash-card dash-premium" style="margin-top:1.5rem;">
           <div class="dash-card-header">
             <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Predictive Health</h3>
-            <a href="404.html" style="color:#FFB800;">Explore</a>
+            <a href="404.html" style="color:var(--clr-cyan-400);">Explore</a>
           </div>
           <div class="dash-premium-grid">
             <div class="dash-premium-item">
@@ -485,200 +486,6 @@
           </div>
           <div class="dash-premium-upgrade">
             <p><strong>Stay ahead of incidents.</strong> Predictive alerts, auto-remediation, and SLA monitoring with Premium.</p>
-            <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== ADMIN: Users ===== -->
-      <section class="dash-section" data-section="users">
-        <h2 class="dash-section-title">User Management</h2>
-        <div class="dash-updated" style="margin-bottom:0.5rem;"><span class="dash-live-dot"></span> Updated — <span class="dash-live-ts">--:--</span> UTC</div>
-        <p class="dash-section-sub">Manage platform users, roles, and access permissions.</p>
-        <div class="dash-card">
-          <div class="dash-table-wrap">
-            <table class="dash-table">
-              <thead>
-                <tr>
-                  <th>User</th>
-                  <th>Email</th>
-                  <th>Role</th>
-                  <th>Status</th>
-                  <th>Projects</th>
-                  <th>Joined</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><div class="user-cell"><span class="user-avatar" style="background:linear-gradient(135deg,var(--clr-cyan-400),var(--clr-violet-400));">A</span> Alex Chen</div></td>
-                  <td>alex@stackly.ai</td>
-                  <td>Admin</td>
-                  <td><span class="status-badge active">Active</span></td>
-                  <td>12</td>
-                  <td>Jan 2024</td>
-                </tr>
-                <tr>
-                  <td><div class="user-cell"><span class="user-avatar" style="background:var(--clr-cyan-500);">S</span> Sarah Mitchell</div></td>
-                  <td>sarah@stackly.ai</td>
-                  <td>Researcher</td>
-                  <td><span class="status-badge active">Active</span></td>
-                  <td>8</td>
-                  <td>Mar 2025</td>
-                </tr>
-                <tr>
-                  <td><div class="user-cell"><span class="user-avatar" style="background:var(--clr-violet-400);">M</span> Mark Johnson</div></td>
-                  <td>mark@stackly.ai</td>
-                  <td>Engineer</td>
-                  <td><span class="status-badge active">Active</span></td>
-                  <td>6</td>
-                  <td>Jun 2025</td>
-                </tr>
-                <tr>
-                  <td><div class="user-cell"><span class="user-avatar" style="background:#00CC88;">E</span> Emily Park</div></td>
-                  <td>emily@stackly.ai</td>
-                  <td>Viewer</td>
-                  <td><span class="status-badge offline">Offline</span></td>
-                  <td>3</td>
-                  <td>Sep 2025</td>
-                </tr>
-                <tr>
-                  <td><div class="user-cell"><span class="user-avatar" style="background:#FFB74D;">D</span> David Kim</div></td>
-                  <td>david@stackly.ai</td>
-                  <td>Engineer</td>
-                  <td><span class="status-badge active">Active</span></td>
-                  <td>5</td>
-                  <td>Nov 2025</td>
-                </tr>
-                <tr>
-                  <td><div class="user-cell"><span class="user-avatar" style="background:#FF4D4D;">L</span> Lisa Wang</div></td>
-                  <td>lisa@stackly.ai</td>
-                  <td>Contributor</td>
-                  <td><span class="status-badge suspended">Suspended</span></td>
-                  <td>1</td>
-                  <td>Feb 2026</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="dash-grid-2" style="margin-top:1.5rem;">
-          <div class="dash-card">
-            <div class="dash-card-header">
-              <h3>User Role Distribution</h3>
-              <a href="404.html">Manage roles</a>
-            </div>
-            <div class="dash-status-list">
-              <div class="dash-status-item">
-                <div class="dash-status-left">
-                  <span class="dash-status-dot" style="background:var(--clr-cyan-400);"></span>
-                  <div><div class="dash-status-name">Admin</div><div class="dash-status-meta">Full system access</div></div>
-                </div>
-                <span class="dash-status-pct" style="color:var(--clr-cyan-400);">12</span>
-              </div>
-              <div class="dash-status-item">
-                <div class="dash-status-left">
-                  <span class="dash-status-dot" style="background:var(--clr-violet-400);"></span>
-                  <div><div class="dash-status-name">Researcher</div><div class="dash-status-meta">Model training & experiments</div></div>
-                </div>
-                <span class="dash-status-pct" style="color:var(--clr-violet-400);">847</span>
-              </div>
-              <div class="dash-status-item">
-                <div class="dash-status-left">
-                  <span class="dash-status-dot green"></span>
-                  <div><div class="dash-status-name">Engineer</div><div class="dash-status-meta">Deployment & infrastructure</div></div>
-                </div>
-                <span class="dash-status-pct" style="color:#00CC88;">1,234</span>
-              </div>
-              <div class="dash-status-item">
-                <div class="dash-status-left">
-                  <span class="dash-status-dot yellow"></span>
-                  <div><div class="dash-status-name">Viewer</div><div class="dash-status-meta">Read-only access</div></div>
-                </div>
-                <span class="dash-status-pct" style="color:#FFB74D;">512</span>
-              </div>
-              <div class="dash-status-item">
-                <div class="dash-status-left">
-                  <span class="dash-status-dot" style="background:#FF4D4D;"></span>
-                  <div><div class="dash-status-name">Contributor</div><div class="dash-status-meta">External collaborators</div></div>
-                </div>
-                <span class="dash-status-pct" style="color:#FF4D4D;">242</span>
-              </div>
-            </div>
-          </div>
-          <div class="dash-card" style="display:flex;flex-direction:column;">
-            <div class="dash-card-header">
-              <h3>Registration Trends</h3>
-              <a href="404.html">View all</a>
-            </div>
-            <div class="dash-chart-bars" style="flex:1;height:auto;">
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="57">
-                  <span class="dash-chart-bar-value">24</span>
-                </div>
-                <small class="dash-chart-bar-label">Mon</small>
-              </div>
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="74">
-                  <span class="dash-chart-bar-value">31</span>
-                </div>
-                <small class="dash-chart-bar-label">Tue</small>
-              </div>
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="43">
-                  <span class="dash-chart-bar-value">18</span>
-                </div>
-                <small class="dash-chart-bar-label">Wed</small>
-              </div>
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="100">
-                  <span class="dash-chart-bar-value">42</span>
-                </div>
-                <small class="dash-chart-bar-label">Thu</small>
-              </div>
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="64">
-                  <span class="dash-chart-bar-value">27</span>
-                </div>
-                <small class="dash-chart-bar-label">Fri</small>
-              </div>
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="83">
-                  <span class="dash-chart-bar-value">35</span>
-                </div>
-                <small class="dash-chart-bar-label">Sat</small>
-              </div>
-              <div class="dash-chart-bar-wrap">
-                <div class="dash-chart-bar green" style="height:4px;" data-height="69">
-                  <span class="dash-chart-bar-value">29</span>
-                </div>
-                <small class="dash-chart-bar-label">Sun</small>
-              </div>
-            </div>
-        </div>
-        <div class="dash-card dash-premium" style="margin-top:1.5rem;">
-          <div class="dash-card-header">
-            <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Advanced User Management</h3>
-            <a href="404.html" style="color:#FFB800;">Explore</a>
-          </div>
-          <div class="dash-premium-grid">
-            <div class="dash-premium-item">
-              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-              <h4>Bulk Operations</h4>
-              <p>Import, export, and manage users in bulk with CSV and API support.</p>
-            </div>
-            <div class="dash-premium-item">
-              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <h4>Custom Roles</h4>
-              <p>Define granular custom roles with per-resource permission policies.</p>
-            </div>
-            <div class="dash-premium-item">
-              <div class="dash-premium-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-              <h4>Activity Audit</h4>
-              <p>Comprehensive audit trail of all user actions with search and filters.</p>
-            </div>
-          </div>
-          <div class="dash-premium-upgrade">
-            <p><strong>Scale your team management.</strong> Bulk operations, custom roles, and activity audit with Premium.</p>
             <a href="404.html" class="dash-premium-btn">Upgrade Now</a>
           </div>
         </div>
@@ -888,7 +695,7 @@
         <div class="dash-card dash-premium" style="margin-top:1.5rem;">
           <div class="dash-card-header">
             <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Deep Analytics</h3>
-            <a href="404.html" style="color:#FFB800;">Explore</a>
+            <a href="404.html" style="color:var(--clr-cyan-400);">Explore</a>
           </div>
           <div class="dash-premium-grid">
             <div class="dash-premium-item">
@@ -1073,7 +880,7 @@
         <div class="dash-card dash-premium" style="margin-top:1.5rem;">
           <div class="dash-card-header">
             <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Advanced Deployments</h3>
-            <a href="404.html" style="color:#FFB800;">Explore</a>
+            <a href="404.html" style="color:var(--clr-cyan-400);">Explore</a>
           </div>
           <div class="dash-premium-grid">
             <div class="dash-premium-item">
@@ -1256,7 +1063,7 @@
         <div class="dash-card dash-premium" style="margin-top:1.5rem;">
           <div class="dash-card-header">
             <h3 style="display:flex;align-items:center;gap:0.75rem;"><span class="dash-premium-badge">Premium</span> Enterprise Security</h3>
-            <a href="404.html" style="color:#FFB800;">Explore</a>
+            <a href="404.html" style="color:var(--clr-cyan-400);">Explore</a>
           </div>
           <div class="dash-premium-grid">
             <div class="dash-premium-item">
